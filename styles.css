@@ -218,3 +218,65 @@ h1 {
     height: 24px;
     margin-right: 10px;
 }
+
+.bmc-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FF813F;
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.bmc-button img {
+    width: 20px;
+    margin-right: 8px;
+}
+
+.bmc-button span {
+    margin-left: 3px;
+}
+
+.bmc-button:hover {
+    background-color: #FF9C5A;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.bmc-button.animate {
+    animation: pulse 1s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .bmc-button {
+        top: 10px;
+        left: 10px;
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+    
+    .bmc-button img {
+        width: 16px;
+    }
+}

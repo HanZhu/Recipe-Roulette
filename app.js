@@ -95,4 +95,34 @@ document.addEventListener('DOMContentLoaded', function() {
 
         recipeDisplay.classList.remove('hidden');
     }
+
+    // Create Buy Me a Coffee button if it doesn't exist
+    if (!document.getElementById('bmc-button')) {
+        const bmcButton = document.createElement('a');
+        bmcButton.id = 'bmc-button';
+        bmcButton.className = 'bmc-button';
+        bmcButton.href = 'https://buymeacoffee.com/hannawandering';
+        bmcButton.target = '_blank';
+        bmcButton.innerHTML = `
+            <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+            <span>Buy me a coffee</span>
+        `;
+        document.body.appendChild(bmcButton);
+    }
+
+    // Buy Me a Coffee button animation
+    const bmcButton = document.getElementById('bmc-button');
+    
+    function animateButton() {
+        bmcButton.classList.add('animate');
+        setTimeout(() => {
+            bmcButton.classList.remove('animate');
+        }, 1000);
+    }
+
+    // Animate every 5 seconds
+    setInterval(animateButton, 5000);
+
+    // Animate on hover
+    bmcButton.addEventListener('mouseenter', animateButton);
 });
