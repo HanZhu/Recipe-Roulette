@@ -10,13 +10,22 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit-code.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <!-- Buy Me a Coffee button -->
+    <a class="bmc-button" href="https://buymeacoffee.com/hannawandering" target="_blank">
+        <img src="https://cdn.buymeacoffee.com/buttons/bmc-new-btn-logo.svg" alt="Buy me a coffee">
+        <span>Buy me a coffee</span>
+    </a>
+
     <div class="container">
         <h1>Recipe Roulette 🎲</h1>
         <p class="tagline">Spin the culinary wheel and discover delicious recipes! 🍳✨</p>
+        
+        <!-- Add back the input section -->
         <div class="input-section">
             <input type="text" id="ingredients" placeholder="Enter ingredients (e.g., chicken, broccoli, rice)">
             <button id="generate-recipe">Spin the Wheel! 🎡</button>
         </div>
+
         <div class="example-ingredients">
             <h3>Example Ingredients:</h3>
             <div class="ingredient-tiles">
@@ -30,6 +39,19 @@
                 <span class="ingredient-tile clickable">🥩 Beef</span>
             </div>
         </div>
+
+        <!-- Move Product Hunt badge back here -->
+        <div class="producthunt-container">
+            <a href="https://www.producthunt.com/posts/recipe-roulette-3?embed=true&utm_source=badge-top-post-topic-badge&utm_medium=badge&utm_souce=badge-recipe&#0045;roulette&#0045;3" 
+               target="_blank" 
+               class="producthunt-badge">
+                <img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-topic-badge.svg?post_id=515372&theme=dark&period=weekly&topic_id=43" 
+                     alt="Recipe Roulette - Random recipes based on the ingredients you have at hand | Product Hunt" 
+                     width="200" 
+                     height="43">
+            </a>
+        </div>
+
         <div id="recipe-display" class="hidden">
             <h2 id="recipe-title"></h2>
             <img id="recipe-image" src="" alt="Recipe Image">
@@ -47,6 +69,8 @@
             </button>
         </div>
     </div>
+
+    <!-- Move this to the end of the body -->
     <div class="social-links">
         <a href="https://x.com/hannaz_z" target="_blank" rel="noopener noreferrer" title="Follow me on X" class="x-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -59,6 +83,7 @@
             </svg>
         </a>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>
